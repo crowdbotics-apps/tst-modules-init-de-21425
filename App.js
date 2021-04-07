@@ -7,7 +7,7 @@
  */
 
 import React from 'react';
-import type {Node} from 'react';
+import type { Node } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,8 +26,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-const Section = ({children, title}): Node => {
+import { screens } from "@screens";
+
+const Section = ({ children, title }): Node => {
   const isDarkMode = useColorScheme() === 'dark';
+  console.log(screens);
   return (
     <View style={styles.sectionContainer}>
       <Text
