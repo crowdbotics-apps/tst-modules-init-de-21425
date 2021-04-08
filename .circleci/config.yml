@@ -65,6 +65,9 @@ jobs:
 
       - run:
           command: bundle install
+          
+      - run:
+          command: yarn install
 
       - save_cache:
           key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
